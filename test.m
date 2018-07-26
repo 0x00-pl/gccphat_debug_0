@@ -20,18 +20,10 @@ plot((abs([fs2])))
 
 fss = fs.*conj(fs2);
 nfss = fss./(abs(fss)+eps);
-%plot(sum(angle([fs fs2 fss])))
 
 nss = ifft(nfss);
 plot(real(nss))
 [~,gp] = max(real(nss))
 
 
-
-%
-%r = rand(512,50);
-%fr = fft(r);
-
-%afr = angle(fr);
-%plot(sum(angle(fr)))
 
